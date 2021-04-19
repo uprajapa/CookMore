@@ -1,0 +1,72 @@
+
+
+{% load static %}
+{% include 'header.html' %}
+<section class="features11 cid-sotc3IQY1T" id="features12-13">    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 align-items-center col-lg">
+                <div class="card-wrapper">
+                    <div class="card-box">
+                        <h4 class="card-title align-items-center mbr-fonts-style mb-0 display-2">
+                            <strong>{{ recipe }}</strong>
+                        </h4>
+                        <h5 class="card-title display-7">By {{recipe.recipe_chef}}</h5>
+                        <div class="container">    
+                            <div class="row justify-content-center mt-4">
+                                <ul class="col">
+                                    <h4>Ingredients:</h4>
+                                    {% for ing in ingredients %}
+                                    <li class="my-3">
+                                        <p class="mbr-section-title mbr-fonts-style mb-0 display-7">{{ing}}</p>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                                <div class="col align-items-center col-lg image-wrapper">
+                                    <img src="/media/{{recipe.recipe_image}}" alt="CookMore">
+                                </div>
+                            </div>                                                                                
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <ul class="col">
+                                    <h4>Steps:</h4>
+                                    {% for step in recipe.recipe_steps %}
+                                    <li class="my-3">
+                                        <p class="mbr-section-title mbr-fonts-style mb-0 display-7">{{step}}</p>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            
+                            <div class="col">
+                                <h4>Servings:</h4>
+                                <p class="mbr-section-title mbr-fonts-style mb-0 display-7">{{recipe.recipe_servings}}</p>
+                                <hr>
+                                <h4>Preparation Time:</h4>
+                                <p class="mbr-section-title mbr-fonts-style mb-0 display-7">{{recipe.recipe_prep_time}}</p>
+                                <hr>
+                                <h4>Cook Time:</h4>
+                                <p class="mbr-section-title mbr-fonts-style mb-0 display-7">{{recipe.recipe_cook_time}}</p>
+                            </div>
+                        </div>
+                        <!-- <p class="mbr-text mbr-fonts-style mb-4 display-7">
+                            You don't have to code to create your own site. Select one of available themes in the Mobirise sitebuilder.</p>
+                        <div class="mbr-text mbr-fonts-style counter-container display-7">
+                            <ul>
+                                <li>Mobile-friendly</li>
+                                <li>Easy setup</li>
+                                <li>Edit visually</li>
+                            </ul>
+                        </div> -->
+                        <!-- <div class="mbr-section-btn mb-4">
+                            <a class="btn btn-primary display-4" href="https://.se">View all our features</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+{% include 'footer.html' %}
